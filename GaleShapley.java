@@ -9,7 +9,7 @@ public class GaleShapley
     private String[] parejaMujer;
     private boolean[] varonComprometido;
  
-    /** Funci髇 constructor **/
+    /** Funci贸n constructor **/
     public GaleShapley(String[] v, String[] m, String[][] pv, String[][] pm)
     {
         N = pv.length;
@@ -22,7 +22,7 @@ public class GaleShapley
         parejaMujer = new String[N];
         calcularEmparejamientos();
     }
-    /** Funci髇 para calcular todas los emparejamientos **/
+    /** Funci贸n para calcular todas los emparejamientos **/
     private void calcularEmparejamientos()
     {
         while (contadorCompromisos < N)
@@ -55,7 +55,7 @@ public class GaleShapley
         }
         imprimirParejas();
     }
-    /** Funci髇 para verificar si la mujer prefiere una nueva pareja en ves de su pareja antes asignada **/
+    /** Funci贸n para verificar si la mujer prefiere una nueva pareja en ves de su pareja antes asignada **/
     private boolean otraPreferencia(String parejaActua, String nuevaPareja, int index)
     {
         for (int i = 0; i < N; i++)
@@ -67,7 +67,7 @@ public class GaleShapley
         }
         return false;
     }
-    /**Funci髇 que extrae el indice de varon **/
+    /**Funci贸n que extrae el indice de varon **/
     private int indiceVarones(String str)
     {
         for (int i = 0; i < N; i++)
@@ -75,7 +75,7 @@ public class GaleShapley
                 return i;
         return -1;
     }
-    /** Funci髇 que extrae el indice de mujer **/
+    /** Funci贸n que extrae el indice de mujer **/
     private int indiceMujeres(String str)
     {
         for (int i = 0; i < N; i++)
@@ -83,7 +83,7 @@ public class GaleShapley
                 return i;
         return -1;
     }
-    /** Funci髇 para imprimir las parejas en consola**/
+    /** Funci贸n para imprimir las parejas en consola**/
     public void imprimirParejas()
     {
         System.out.println("Las Parejas son : ");
@@ -92,7 +92,7 @@ public class GaleShapley
             System.out.println(parejaMujer[i] +" y "+ mujeres[i]);
         }
     }
-    /** Funci髇 principal **/
+    /** Funci贸n principal **/
     public static void main(String[] args) 
     {
         System.out.println("Algoritmo de Gale Shapley \n");
@@ -107,7 +107,7 @@ public class GaleShapley
                          {"Julia", "Elena", "Paula", "Laura"}, 
                          {"Elena", "Laura", "Julia", "Paula"}};
         /** Preferencia de las mujeres **/                      
-        String[][] wp = {{"Diego", "Pedro", "Jorge", "M1"}, 
+        String[][] wp = {{"Diego", "Pedro", "Jorge", "Mateo"}, 
                          {"Mateo", "Pedro", "Jorge", "Diego"}, 
                          {"Jorge", "Mateo", "Pedro", "Diego"},
                          {"Pedro", "Jorge", "Diego", "Mateo"},};
